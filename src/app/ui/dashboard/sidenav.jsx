@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import NavLinks from './nav-links'
+
+import NavLinks from '../dashboard/nav-links'
 import styles from '../dashboard/sideNav.module.css'
 
 export default function SideNav(){

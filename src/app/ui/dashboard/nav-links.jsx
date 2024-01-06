@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import styles from '../dashboard/navlinks.module.css'
+import { usePathname } from 'next/navigation';
 
 
 const links = [
@@ -18,6 +19,8 @@ const links = [
 ]
 
 export default function NavLinks(){
+
+    const router = usePathname();
 
     return(
     <>
