@@ -1,25 +1,28 @@
 'use client'
-
-import { ALBUM } from "@/app/lib/placeholder-data"
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { useState, useRef } from 'react';
+import { ALBUM } from "@/app/lib/placeholder-data";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Icon } from '@iconify/react';
+import playIcon from '@iconify/icons-mdi/play';
+import pauseIcon from '@iconify/icons-mdi/pause';
 
 export default function Album() {
-    
-    const playAudio = async (rute, name) => {
-        try {
-            const audio = new Audio(rute);
+    const [audioPlaying, setAudioPlaying] = useState(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const audioRef = useRef(null);
 
-            // Esperar a que se cargue el audio antes de intentar reproducirlo
-            await new Promise((resolve, reject) => {
-                audio.addEventListener('loadeddata', resolve);
-                audio.addEventListener('error', reject);
-            });
-
-            // Reproducir el audio después de que se ha cargado
-            audio.play();
-            console.log(`Reproduciendo... ${name}`);
-        } catch (error) {
-            console.error('Error al cargar o reproducir el audio:', error);
+    const playAudio = (route) => {
+        if (audioRef.current) {
+            audioRef.current.src = route;
+            if(!isPlaying){
+                audioRef.current.play();
+                setAudioPlaying(route);
+                setIsPlaying(true)
+            }
+            else{
+                audioRef.current.pause();
+                setIsPlaying(false)
+            }
         }
     };
 
@@ -35,20 +38,22 @@ export default function Album() {
                     </tr>
                 </thead>
                 <tbody>
-                    {ALBUM.map((track) => {
-                        return (
-                            <tr key={track.id}>
-                                <td>{track.id}</td>
-                                <td>{track.name}</td>
-                                <td>{track.time}</td>
-                                <td>
-                                    <button onClick={() => playAudio(track.rute, track.name)}>Play</button>
-                                </td>
-                            </tr>
-                        );
-                    })}
+                    {ALBUM.map((track) => (
+                        <tr key={track.id}>
+                            <td>{track.id}</td>
+                            <td>{track.name}</td>
+                            <td>{track.time}</td>
+                            <td>
+                            <button onClick={() => playAudio(track.route)}>
+                            <Icon icon={isPlaying && audioPlaying === track.route ? pauseIcon : playIcon} />
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
+            <audio ref={audioRef} autoPlay={false} controls={false} />
         </>
     );
 }
+

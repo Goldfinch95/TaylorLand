@@ -3,79 +3,79 @@ const ALBUM = [
         id: 1,
         name: "Lavender Haze",
         time: "3:22",
-        rute: "../lib/songs/midnights/Lavender-Haze.mp3"
+        route: "/songs/midnigths/1_lavender_haze.mp3"
     },
     {
         id: 2,
         name: "Maroon",
         time: "3:38",
-        rute: "../lib/songs/midnights/Maroon.mp3"
+        route: "/songs/midnigths/2_maroon.mp3"
     },
     {
         id: 3,
         name: "Anti-Hero",
         time: "3:20",
-        rute: "../lib/songs/midnights/Anti-Hero.mp3"
+        route: "/songs/midnigths/3_anti-hero.mp3"
     },
     {
         id: 4,
         name: "Snow On The Beach (feat. Lana Del Rey)",
         time: "4:16",
-        rute: "../lib/songs/midnights/Snow On The Beach(feat. Lana Del Rey).mp3"
+        route: "/songs/midnigths/4_snow_on_the_beach.mp3"
     },
     {
         id: 5,
         name: "You're On Your Own,Kid",
         time: "3:14",
-        rute: "../lib/songs/midnights/You're On Your Own,Kid.mp3"
+        route: "/songs/midnigths/5_youre_on_your_own_kid.mp3"
     },
     {
         id: 6,
         name: "Midnight Rain",
         time: "2:54",
-        rute: "../lib/songs/midnights/Midnight Rain.mp3"
+        route: "/songs/midnigths/6_midnight _rain.mp3"
     },
     {
         id: 7,
         name: "Question...?",
         time: "3:30",
-        rute: "../lib/songs/midnights/Question....mp3"
+        route: "/songs/midnigths/7_question....mp3"
     },
     {
         id: 8,
         name: "Vigilant Shit",
         time: "2:44",
-        rute: "../lib/songs/midnights/Vigilant Shit.mp3"
+        route: "/songs/midnigths/8_vigilante_shit.mp3"
     },
     {
         id: 9,
         name: "Bejeweled",
         time: "3:14",
-        rute: "../lib/songs/midnights/Bejeweled.mp3"
+        route: "/songs/midnigths/9_bejeweled.mp3"
     },
     {
         id: 10,
         name: "Labyrinth",
         time: "4:07",
-        rute: "../lib/songs/midnights/Labyrinth.mp3"
+        route: "/songs/midnigths/10_Labyrinth.mp3"
     },
     {
         id: 11,
         name: "Karma",
         time: "3:24",
-        rute: "../lib/songs/midnights/Karma.mp3"
+        route: "/songs/midnigths/11_karma.mp3"
     },
     {
         id: 12,
         name: "Sweet Nothing",
         time: "3:08",
-        rute: "../lib/songs/midnights/Sweet Nothing.mp3"
+        route: "/songs/midnigths/12_sweet_nothing.mp3"
     },
     {
         id: 13,
         name: "Mastermind",
         time: "3:11",
-        rute: "../lib/songs/midnights/Mastermind.mp3"
+        route: "/songs/midnigths/13_mastermind.mp3"
     },
 
 ]
